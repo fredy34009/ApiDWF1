@@ -2,10 +2,12 @@ package com.dws.api.demo.models;
 
 import jakarta.persistence.*;
 
+//entidad curso
 @Entity
 @Table(name = "curso")
 public class CursoModel {
 
+    //propiedades de la tabla curso
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true,nullable = false)
@@ -15,6 +17,7 @@ public class CursoModel {
     private String numeroTelefono;
     private String email;
 
+    //getter y setter
     public String getNombreCurso() {
         return nombreCurso;
     }

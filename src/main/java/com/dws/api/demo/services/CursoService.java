@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Service
 public class CursoService {
+    //Contiene todos los metodos crud de un curso
     @Autowired
     CursoRepository cursoRepository;
 

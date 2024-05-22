@@ -9,8 +9,11 @@ import java.util.List;
 
 @Repository
 public interface AlumnoRepository extends CrudRepository<AlumnoModel,Long> {
-    @Query(nativeQuery = true, value = "SELECT * FROM cursos.alumno where curso=?1")
+
+    //retorna los alumnos de un curso
+    @Query(nativeQuery = true, value = "SELECT * FROM alumno where curso=?1")
     List<AlumnoModel> cursoByAlumno(Long id);
+    //retorna un alumno de un curso en especifico
     @Query(nativeQuery = true, value = "SELECT * FROM alumno where curso=? and alumno.id=?")
     AlumnoModel datosAlumnoEnCurso(Long idCurso,Long idAlumno);
 }

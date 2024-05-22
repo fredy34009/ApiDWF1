@@ -2,9 +2,12 @@ package com.dws.api.demo.models;
 
 import jakarta.persistence.*;
 
+//entidad alumno
 @Entity
 @Table(name = "alumno")
 public class AlumnoModel {
+
+    //propieades de la tabla alumno
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(unique = true,nullable = false)
@@ -17,6 +20,7 @@ public class AlumnoModel {
     @JoinColumn(name = "curso")
     private CursoModel curso;
 
+    //getter y setter
     public Long getId() {
         return id;
     }

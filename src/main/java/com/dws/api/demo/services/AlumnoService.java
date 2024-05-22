@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+//contiene las consultas a la tabla alumno
 public class AlumnoService {
+    //Contiene todos los metodos crud de un alumno
     @Autowired
     AlumnoRepository alumnoRepository;
 
